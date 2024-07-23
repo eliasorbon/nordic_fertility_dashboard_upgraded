@@ -99,7 +99,7 @@ def create_dashboard(countries, data):
     
     fig.patch.set_facecolor('#ECEFF4')
     fig.suptitle('Nordic Countries Fertility Analysis Dashboard', fontproperties=title_font, fontsize=24, y=0.98, color='#2E3440')
-    fig.subplots_adjust(left=0.05, right=0.95, bottom=0.05, top=0.92, wspace=0.3, hspace=0.4)
+    fig.subplots_adjust(left=0.05, right=0.95, bottom=0.07, top=0.92, wspace=0.3, hspace=0.4)
    
     # 1. Fertility Rate Trends
     ax1 = fig.add_subplot(321)
@@ -238,7 +238,7 @@ def create_dashboard(countries, data):
     else:
         ax6.text(0.5, 0.5, 'Fertility Rate data not available for forecast', ha='center', va='center')
 
-    fig.text(0.05, 0.01, 'Data source: World Bank', fontproperties=tick_font, color='#4C566A')
+    fig.text(0.05, 0.02, 'Data source: World Bank', fontproperties=tick_font, color='#4C566A')
     
     buf = io.BytesIO()
     fig.savefig(buf, format='png', facecolor=fig.get_facecolor(), edgecolor='none', bbox_inches='tight')
